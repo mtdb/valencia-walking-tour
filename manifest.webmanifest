@@ -1,0 +1,13 @@
+{
+  "name": "València a pie · un paseo por Ciutat Vella",
+  "short_name": "València a pie",
+  "description": "Un paseo circular por la vida, el comercio y la memoria de Valencia.",
+  "lang": "es",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#263c32",
+  "icons": [{ "src": "icons/compass.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

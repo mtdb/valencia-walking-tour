@@ -1,0 +1,13 @@
+{
+  "name": "valencia-walking-tour",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/preview.mjs",
+    "check": "node tools/check-tour.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tools/browser-smoke.mjs",
+    "build": "node tools/build.mjs"
+  }
+}

@@ -1,0 +1,126 @@
+export const VERIFIED = "2026-10-07";
+export const ROUTE = {
+  name: "València: del agua a la mesa, de la mesa a la plaza",
+  duration: "3–4 horas",
+  distance: "2,5–3 km aprox.",
+  start: { name: "Plaza del Mercado", coordinates: { lat: 39.47394, lng: -0.37858 } },
+  end: { name: "Plaza del Mercado", coordinates: { lat: 39.47394, lng: -0.37858 } },
+};
+
+export const GLOSSARY = [
+  { key: "huerta", title: "La huerta", definition: "Las tierras de cultivo que rodean Valencia. Una red de acequias lleva el agua a los campos, y las comunidades de regantes se encargan de repartirla y mantener los canales." },
+  { key: "lonja", title: "Lonja", definition: "Un edificio donde se reúnen los comerciantes para hacer negocios. La de Valencia es uno de los grandes ejemplos del gótico civil europeo." },
+  { key: "girola", title: "Girola", definition: "El pasillo que rodea la parte posterior del altar mayor de una iglesia y permite acceder a sus capillas." },
+  { key: "almoina", title: "Almoina", definition: "Significa limosna. El nombre recuerda un edificio medieval destinado a atender a personas pobres; hoy identifica una plaza y el centro arqueológico cercano." },
+  { key: "acequia", title: "Acequia", definition: "Un canal que lleva agua a los campos. Los regantes se organizan para repartir el agua y cuidar los canales." },
+];
+
+export const INTERIORS = [
+  { id: "lonja", name: "Lonja", price: 2, minutes: 40, base: true, note: "General 2 € · reducida 1 €. Entrada gratuita los domingos y festivos de apertura.", hours: "Lunes–sábado 10:00–19:00; domingos y festivos 10:00–14:00. Último acceso 30 min antes. Hay días de cierre.", access: "Entrada por calle de la Lonja / Llotja, 2. Algunas zonas tienen escaleras y barreras de acceso. Si necesitas una visita accesible, consulta qué espacios puedes recorrer y qué asistencia ofrecen.", source: "https://cultural.valencia.es/es/monument/la-lonja-y-consulado-del-mar/" },
+  { id: "santos-juanes", name: "Santos Juanes", price: 15, minutes: 55, note: "Visita cultural por tu cuenta, con proyecciones y audioguía: 15 € · reducida 12 €. Las visitas y los actos de culto tienen horarios distintos.", hours: "Varía por temporada y culto. De octubre a junio, miércoles y domingos la visita cultural comienza a las 13:30; consulta los pases del día.", access: "Consulta con el templo las condiciones de acceso a la visita cultural.", source: "https://santosjuanesvalencia.com/visita-cultural/entradas/", hoursSource: "https://santosjuanesvalencia.com/horarios/" },
+  { id: "catedral", name: "Catedral y museo", price: 12, minutes: 75, note: "General 12 € · reducida 6 €. Menores de 8 años gratis. Pack familiar 22 €: dos adultos y hasta tres niños de 8–17 años.", hours: "Octubre–junio: L–V 10:30–18:30, sábados 10:30–17:30, domingos 14:00–17:30. Julio–septiembre amplía el fin de semana. Hay días sin visita cultural.", access: "La visita cultural comienza en la puerta de los Hierros. Si necesitas evitar escaleras, consulta el recorrido accesible. Para asistir al culto, consulta los accesos y horarios del templo.", source: "https://catedraldevalencia.es/visita-cultural/horarios-y-tarifas/" },
+  { id: "almoina", name: "Museo de la Almoina", price: 2, minutes: 50, note: "General 2 € · reducida 1 €. Entrada gratuita los domingos y festivos de apertura.", hours: "Horario publicado: lunes–sábado 10:00–19:00; domingos y festivos 10:00–14:00. Consulta posibles cambios, especialmente si vas un lunes.", access: "Plaza de Décimo Junio Bruto, s/n. Si necesitas el ascensor, confirma que esté disponible antes de ir.", source: "https://cultural.valencia.es/es/museu/la-almoina-centro-arqueologico/" },
+  { id: "serranos", name: "Subida a Serranos", price: 2, minutes: 25, note: "General 2 € · reducida 1 €. Entrada gratuita los domingos y festivos de apertura. Exterior gratuito.", hours: "L–S 10:00–19:00; domingos y festivos 10:00–14:00. Último acceso 30 min antes. Puede cerrar por meteorología o trabajos.", access: "La subida tiene escaleras y no hay ascensor. También puedes contemplar las torres desde la plaza.", source: "https://cultural.valencia.es/es/museu/torres-de-serranos/" },
+  { id: "miguelete", name: "Subida al Miguelete", price: 3, minutes: 35, note: "General 3 € · reducida 2 €. Entrada separada de Catedral y museo. Menores de 8 años gratis.", hours: "Horario publicado 10:00–18:45; último acceso 30 min antes. Consulta excepciones y aforo.", access: "La subida es por una escalera de caracol. Puedes visitarlo en la parada de la Catedral.", source: "https://catedraldevalencia.es/visita-cultural/horarios-y-tarifas/" },
+];
+
+export const STOPS = [
+  {
+    id: "mercado", name: "Mercado Central", shortName: "El mercado", eyebrow: "La ciudad despierta", subtitle: "Antes de mirar arriba, mira los puestos.",
+    coordinates: ROUTE.start.coordinates, mapQuery: "Plaza del Mercado, Valencia, España", art: "market", tone: "orange", duration: "30–45 min + desayuno", cost: "Entrada gratis",
+    description: "Verduras de la huerta, pescado, especias y conversaciones entre puestos. El Mercado Central es un buen lugar para conocer los sabores de Valencia y empezar el paseo con un desayuno.",
+    look: "Levanta después la vista hacia el hierro, el cristal y la cerámica. El edificio modernista se inauguró en 1928; la actividad de mercado del entorno es mucho más antigua.",
+    curiosity: "Una tradición popular cuenta que la cotorra del mercado y el Pardal de Sant Joan conversaban desde sus veletas sobre la vida de la plaza. Busca las dos aves al salir a la plaza.",
+    practical: "Horario habitual: lunes a sábado, 07:30–15:00. Si quieres comprar, hazlo al principio: al regresar puede estar cerrado. En las zonas más concurridas, procura dejar paso a quienes están comprando.",
+    transition: "Desde la plaza, observa Santos Juanes y la Lonja. Para entrar en la Lonja busca calle de la Llotja, 2, y ten en cuenta que abre a las 10:00.",
+    sources: [{ label: "Historia y horario del mercado", url: "https://www.mercadocentralvalencia.es/Mercado/HistoriaMercado" }, { label: "Accesos adaptados", url: "https://www.valencia.es/es/-/infociudad-mercado-central" }],
+    glossary: ["huerta"], interiors: [],
+  },
+  {
+    id: "comercio", name: "Lonja y Santos Juanes", shortName: "La Lonja", eyebrow: "Un palacio para el intercambio", subtitle: "La riqueza también se lee en piedra.",
+    coordinates: { lat: 39.47441, lng: -0.37843 }, mapQuery: "Carrer de la Llotja 2, Valencia, España", art: "columns", tone: "green", duration: "20 min exterior", cost: "Exterior gratis · interiores opcionales",
+    description: "Frente al mercado, la Lonja expresa la importancia de una ciudad mercantil mediterránea. Su conjunto creció entre finales del siglo XV y la primera mitad del XVI: la seda fue una parte de una economía que intercambiaba muchos productos.",
+    look: "Si entras, detente bajo las columnas helicoidales de la Sala de Contratación. Su forma recuerda a un bosque de palmeras de piedra. Desde fuera, compara la Lonja con la fachada de Santos Juanes, al otro lado de la plaza.",
+    curiosity: "Santos Juanes añade otra capa: su estructura gótica fue transformada después del incendio de 1592 y durante las reformas de los siglos XVII y XVIII. Los dos edificios cuentan historias distintas desde una misma plaza.",
+    practical: "Vale la pena reservar unos 40 minutos para entrar en la Lonja (2 € de tarifa general). Si también quieres visitar Santos Juanes, necesitarás otra entrada y algo más de tiempo.",
+    transition: "Sigue por la calle de Trench y entra en Plaza Redonda por uno de sus pasajes. Después, continúa hacia la plaza de Lope de Vega y Santa Catalina.",
+    sources: [{ label: "Lonja · Patrimonio Mundial", url: "https://whc.unesco.org/en/list/782/" }, { label: "Historia de Santos Juanes", url: "https://cultural.valencia.es/es/monument/esglesia-dels-sants-joans/" }],
+    glossary: ["lonja"], interiors: ["lonja", "santos-juanes"],
+  },
+  {
+    id: "redonda", name: "Plaza Redonda y Santa Catalina", shortName: "Plaza Redonda", eyebrow: "El pequeño comercio", subtitle: "Un rincón para bajar el ritmo.",
+    coordinates: { lat: 39.47361, lng: -0.37656 }, art: "round", tone: "rose", duration: "20–30 min + pausa", cost: "Plaza e iglesia gratis",
+    description: "Tras la monumentalidad de la Lonja, Plaza Redonda invita a detenerse entre pequeños comercios. Esta plaza de 37 metros de diámetro se construyó en 1840 sobre el terreno del antiguo matadero y se rehabilitó en 2012.",
+    look: "Mira los accesos, los balcones y los escaparates. Después busca Santa Catalina: la iglesia de tradición gótica y su torre barroca reúnen épocas distintas en un mismo conjunto.",
+    curiosity: "Santa Catalina tiene una girola: un pasillo que rodea el altar mayor. Cerca de la iglesia encontrarás también la horchatería del mismo nombre, una buena excusa para hacer una pausa.",
+    practical: "La entrada a la iglesia es gratuita en su horario de apertura. Si hay culto, espera para visitarla. Para la torre, calcula unos 2 € como referencia orientativa y confirma allí si se puede subir y cuál es el precio actual.",
+    transition: "Continúa hacia Plaza de la Reina y acércate a la puerta de los Hierros de la Catedral.",
+    sources: [{ label: "Historia de Plaza Redonda", url: "https://cultural.valencia.es/es/monument/plaza-redonda/" }, { label: "Santa Catalina", url: "https://www.visitvalencia.com/que-hacer-valencia/cultura-valenciana/monumentos-en-valencia/iglesia-torre-santa-catalina" }],
+    glossary: ["girola"], interiors: [],
+  },
+  {
+    id: "catedral", name: "Tres puertas, una Catedral", shortName: "La Catedral", eyebrow: "Aprender a mirar", subtitle: "¿Parecen las tres puertas del mismo edificio?",
+    coordinates: { lat: 39.47534, lng: -0.37549 }, mapQuery: "Puerta de los Hierros, Catedral de Valencia, España", art: "cathedral", tone: "sand", duration: "20–30 min exterior", cost: "Portadas gratis · visita cultural 12 €",
+    description: "La Catedral comenzó a construirse en 1262 sobre la antigua mezquita mayor. Sus portadas hacen visibles siglos de ampliaciones y cambios de poder y religión. Puedes contemplar las tres puertas desde la calle.",
+    look: "Empieza en Hierros: curvas barrocas desde Plaza de la Reina. Continúa por Barchilla hacia el Palau: arcos románicos junto a la Almoina. Tras esa parada, llegarás a Apóstoles y su lenguaje gótico en Plaza de la Virgen.",
+    curiosity: "Románico, gótico y barroco conviven en un solo edificio. Al comparar las puertas, fíjate en los arcos, las esculturas y la forma de las fachadas: cada una pertenece a un momento distinto de la Catedral.",
+    practical: "La entrada cultural incluye la Catedral y su museo. El Miguelete tiene una entrada aparte y se sube por escaleras. Consulta los horarios de visita: durante el culto, el acceso turístico puede estar limitado.",
+    transition: "Desde la puerta de los Hierros, sigue por Barchilla hasta la puerta del Palau y la Almoina. Después continuarás hacia Plaza de la Virgen, donde verás la puerta de los Apóstoles.",
+    sources: [{ label: "Portadas e historia", url: "https://cultural.valencia.es/es/monument/catedral-de-valencia-iglesia-metropolitana/" }, { label: "Horarios y tarifas", url: "https://catedraldevalencia.es/visita-cultural/horarios-y-tarifas/" }],
+    glossary: [], interiors: ["catedral", "miguelete"],
+  },
+  {
+    id: "almoina", name: "Almoina y Plaza de la Virgen", shortName: "El agua y la memoria", eyebrow: "Lo que hay bajo los pies", subtitle: "Varias ciudades. Un mismo suelo.",
+    coordinates: { lat: 39.47577, lng: -0.37453 }, mapQuery: "Plaza de la Almoina, Valencia, España", art: "water", tone: "water", duration: "25–35 min exterior", cost: "Plazas gratis · museo 2 €",
+    description: "Valentia fue fundada en 138 a. C. La Almoina conserva testimonios romanos, visigodos e islámicos: cada época reutilizó y transformó la anterior. Si quieres ver los restos de cerca y conocer su historia, entra en el museo arqueológico.",
+    look: "Pasa entre la Catedral y la Basílica hasta la puerta de los Apóstoles, en Plaza de la Virgen. Aquí se reúne el Tribunal de las Aguas, una institución vinculada al riego de la huerta.",
+    curiosity: "El Tribunal de las Aguas reúne a representantes de las comunidades de regantes para resolver conflictos sobre el riego. Sus sesiones públicas siguen formando parte de la vida de la huerta.",
+    practical: "El Tribunal se reúne habitualmente los jueves a las 12:00 ante la puerta de los Apóstoles. Si tu visita coincide, puedes acercarte a escuchar la sesión. El museo tiene su acceso en plaza de Décimo Junio Bruto, s/n.",
+    transition: "Desde Plaza de la Virgen, sigue por Navellos y Muro de Santa Ana hasta la calle de Serranos. Las torres están al final de la calle, junto al antiguo cauce del Turia.",
+    sources: [{ label: "Museo de la Almoina", url: "https://cultural.valencia.es/es/museu/la-almoina-centro-arqueologico/" }, { label: "Tribunal de las Aguas", url: "https://tribunaldelasaguas.org/simbolos/" }],
+    glossary: ["almoina", "acequia"], interiors: ["almoina"],
+  },
+  {
+    id: "serranos", name: "Torres de Serranos", shortName: "Serranos", eyebrow: "El umbral de la ciudad", subtitle: "Imagina la muralla continuando a ambos lados.",
+    coordinates: { lat: 39.47927, lng: -0.37600 }, mapQuery: "Torres de Serranos, Plaza dels Furs, Valencia, España", art: "towers", tone: "orange", duration: "15–20 min exterior", cost: "Exterior gratis · subida 2 €",
+    description: "Hoy las torres parecen aisladas. Fueron una de las puertas de la muralla medieval cristiana, cuya demolición comenzó en 1865. Serranos sobrevivió y todavía permite imaginar cómo se entraba en la ciudad amurallada.",
+    look: "Observa sus dos fachadas y mira atrás hacia la ciudad que acabas de recorrer. No hace falta subir para comprender su papel como puerta monumental.",
+    curiosity: "Durante la Guerra Civil, la Junta del Tesoro Artístico acondicionó las torres para proteger obras evacuadas del Museo del Prado. Las torres se convirtieron así en refugio para parte de la colección del Prado.",
+    practical: "La subida es opcional y tiene escaleras, sin ascensor. Puede limitarse por lluvia, viento o trabajos. Desde la plaza también se aprecian bien sus fachadas y su tamaño.",
+    transition: "Toma la calle de Roteros hacia plaza del Carmen. El regreso al Mercado pasa por este barrio, con tiempo para callejear o hacer una pausa.",
+    sources: [{ label: "Visita y accesibilidad", url: "https://www.valencia.es/es/-/infociudad-torres-de-serranos" }, { label: "El Prado: Arte protegido", url: "https://www.museodelprado.es/actualidad/exposicion/arte-protegido/81811f39-e3f9-4fe7-94af-225676279523" }],
+    glossary: [], interiors: ["serranos"],
+  },
+  {
+    id: "carmen", name: "El Carmen, sin prisa", shortName: "El Carmen", eyebrow: "Volver con otra mirada", subtitle: "Un último paseo entre calles y plazas.",
+    coordinates: { lat: 39.47904, lng: -0.37857 }, mapQuery: "Plaza del Carmen, Ciutat Vella, Valencia, España", art: "street", tone: "green", duration: "30–45 min + pausa", cost: "Barrio y CCCC gratis",
+    description: "Balcones, puertas abiertas y conversaciones en las terrazas. En el Carmen, los monumentos conviven con la vida del barrio. Antes de volver al Mercado, aprovecha para comer, sentarte en una plaza o recorrer sus calles con calma.",
+    look: "Desde plaza del Carmen, acércate al Centre del Carme Cultura Contemporània (CCCC), en la calle del Museo, 2. Sus exposiciones son gratuitas y abre habitualmente de martes a domingo de 11:00 a 21:00.",
+    curiosity: "Además de los grandes edificios, Valencia se reconoce en los oficios que la sostienen: cultivar la huerta, repartir el agua, vender en el mercado. Al regresar, volverás a encontrar esas historias en la plaza donde empezó el paseo.",
+    practical: "Para volver, sigue por las calles del Museo y Alta hasta la plaza del Tossal. Baja por Bolsería hacia la plaza del Mercado. Si llegas después de las 15:00, el Mercado suele estar cerrado, pero la plaza sigue siendo un buen lugar para terminar.",
+    transition: "El camino de vuelta pasa por Museo, Alta, la plaza del Tossal y Bolsería. Al final te espera la plaza del Mercado, donde empezó el paseo.",
+    sources: [{ label: "La plaza del Carmen", url: "https://cultural.valencia.es/es/monument/plaza-del-carmen/" }, { label: "CCCC · entrada gratuita", url: "https://www.consorcimuseus.gva.es/centro-del-carmen/sede-consorcio-museos-c-v/?lang=es" }],
+    glossary: [], interiors: [],
+  },
+];
+
+export const ROUTE_ORDER = STOPS.map((stop) => stop.id);
+// Geographic references and doorway observation points, not a surveyed walking track.
+export const WAYPOINTS = [
+  ROUTE.start,
+  { name: "Mercado Central · referencia del edificio", coordinates: { lat: 39.47350, lng: -0.37893 } },
+  { name: "Santos Juanes · referencia del edificio", coordinates: { lat: 39.47427, lng: -0.37922 } },
+  { name: "Lonja · referencia del conjunto, entrada en Llotja 2", coordinates: { lat: 39.47441, lng: -0.37843 } },
+  { name: "Plaza Redonda", coordinates: { lat: 39.47361, lng: -0.37656 } },
+  { name: "Santa Catalina · referencia de la iglesia", coordinates: { lat: 39.47412, lng: -0.37639 } },
+  { name: "Plaza de la Reina", coordinates: { lat: 39.47447, lng: -0.37546 } },
+  { name: "Hierros · punto de observación aproximado", coordinates: { lat: 39.47534, lng: -0.37549 } },
+  { name: "Palau · punto de observación aproximado", coordinates: { lat: 39.47557, lng: -0.37450 } },
+  { name: "Plaza de la Almoina", coordinates: { lat: 39.47577, lng: -0.37453 } },
+  { name: "Apóstoles · punto de observación aproximado", coordinates: { lat: 39.47597, lng: -0.37528 } },
+  { name: "Plaza de la Virgen", coordinates: { lat: 39.47632, lng: -0.37529 } },
+  { name: "Torres de Serranos · referencia de las torres", coordinates: { lat: 39.47927, lng: -0.37600 } },
+  { name: "Plaza del Carmen", coordinates: { lat: 39.47904, lng: -0.37857 } },
+  { name: "Plaza del Tossal", coordinates: { lat: 39.47619, lng: -0.38018 } },
+  { ...ROUTE.end, name: "Regreso a plaza del Mercado" },
+];
