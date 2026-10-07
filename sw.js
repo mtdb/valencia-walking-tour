@@ -1,5 +1,5 @@
 const PREFIX = "valencia-tour-shell-";
-const CACHE = `${PREFIX}v3`;
+const CACHE = `${PREFIX}v4`;
 const CORE = ["./", "./index.html", "./styles.css", "./src/app.js", "./src/tour-data.js", "./src/utils.js", "./src/navigation.js", "./src/gpx.js", "./src/weather.js", "./src/photos.js", "./manifest.webmanifest", "./icons/compass.svg", "./IMAGE_CREDITS.md", "./route.md"];
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting()));

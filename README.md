@@ -1,58 +1,81 @@
-# Valencia walking tour
+# Valencia Walking Tour
 
-Guía estática en español para descubrir Ciutat Vella a pie. Siete capítulos recorren Mercado, Lonja, Plaza Redonda, Catedral, Almoina/Virgen, Serranos y Carmen, con regreso a la misma plaza del Mercado. Funciona cualquier día; los interiores son decisiones del visitante y las duraciones son orientativas.
+A Spanish-language walking guide to Valencia's historic centre. The circular route starts at Plaza del Mercado, visits the Lonja, Plaza Redonda, Cathedral, Almoina, Torres de Serranos and El Carmen, and returns to the starting square.
 
-## Ejecutar y comprobar
+The site uses plain HTML, CSS and JavaScript, with no runtime dependencies.
 
-Requiere Node.js 24 para las herramientas. La web no tiene dependencias de ejecución.
+## Features
+
+- Seven stops with historical context, things to notice, directions and official sources.
+- Opening hours, accessibility notes and optional visits with an estimated admission budget.
+- Hourly weather for today and the next six days, using Valencia's local time.
+- Photographs with author credits and licence links.
+- Saved visit progress and map preferences: Google Maps, OsmAnd or copied coordinates.
+- GPX export containing 16 ordered reference points.
+- Offline reading after the first complete load; photographs are cached as they are viewed.
+
+Allow roughly three to four hours for the walk with a visit to the Lonja. Additional indoor visits take longer. Opening hours and admission prices are reference information: check each venue's official website before visiting. The GPX file contains waypoints, not a surveyed walking track.
+
+## Local development
+
+Use Node.js 24. The browser checks also require Chromium.
 
 ```sh
 node tools/preview.mjs
 ```
 
-Abre http://127.0.0.1:4173/valencia-walking-tour/. El servidor también admite la raíz para desarrollo.
+Open [the local preview](http://127.0.0.1:4173/valencia-walking-tour/). The server supports both the repository subpath and the root path.
+
+## Validation and build
 
 ```sh
 node tools/check-tour.mjs
 node --test tests/*.test.mjs
-node tools/browser-smoke.mjs
 node tools/build.mjs
 ```
 
-La prueba de navegador requiere Chromium y el servidor activo. Genera capturas e informe en `captures/`. Utiliza previsiones sintéticas exclusivamente dentro de las pruebas; no se incluyen en `dist/`. También puedes usar `pnpm run check`, `pnpm test`, `pnpm run test:browser` y `pnpm run build`.
+With the preview server running, check the browser experience:
 
-## Experiencia implementada
+```sh
+node tools/browser-smoke.mjs
+```
 
-- Recorrido circular con historia, detalles visibles, transiciones, fuentes y glosario.
-- Interiores de pago/gratis, condiciones de gratuidad, presupuesto orientativo y tiempo adicional según selección.
-- Clima por horas para hoy y los próximos seis días, antes de las paradas, usando la fecha y hora de Valencia.
-- Progreso y preferencias guardados localmente; Google Maps, OsmAnd o copia de coordenadas.
-- Exportación de 16 referencias GPS en GPX, sin atribuirles una geometría peatonal medida.
-- PWA con texto sin conexión tras la primera instalación completa. Las fotografías de Wikimedia se guardan al verse y muestran un mensaje si no pueden cargarse.
+Browser checks cover desktop and mobile layouts, navigation, saved progress, budget selection, weather errors and retries, photo availability and offline reading. They write screenshots and a report to `captures/`. Weather fixtures are used only in tests and are excluded from the published site. External photo and weather connections require separate verification when network access is restricted.
 
-El clima consulta [Open-Meteo](https://open-meteo.com/en/docs) sin clave ni geolocalización. Reutiliza consultas durante 30 minutos; si falla la conexión conserva datos hasta 48 horas, siempre que incluyan hoy y mostrando que están guardados. Sin datos válidos ofrece reintento y AEMET. La API gratuita se destina a uso no comercial según sus [condiciones](https://open-meteo.com/en/terms). Ver [decisiones de UX](weather-ux.md).
+The same commands are available through `pnpm run check`, `pnpm test`, `pnpm run build` and `pnpm run test:browser`. Generated output in `dist/` and `captures/` is ignored by Git.
 
-## Contenido y mantenimiento
+## Content and maintenance
 
-- [Ruta y fuentes](route.md): coordenadas, accesos, precios y horarios revisados el 07/10/2026.
-- [Revisión adversaria](route-review.md): crítica histórica y práctica y resolución de pendientes.
-- [Brief editorial](tour.md), [arquitectura](implementation-plan.md) y [patrones de referencia](project-patterns.md).
-- [Créditos](IMAGE_CREDITS.md): autores, originales y licencias de las fotografías de Wikimedia Commons.
+| File | Purpose |
+| --- | --- |
+| `index.html` | Page structure, introductory copy and dialogs |
+| `styles.css` | Layout and visual styles |
+| `src/tour-data.js` | Stops, GPS references, glossary, admission prices and opening hours |
+| `src/photos.js` | Photograph URLs, captions, authors and licences |
+| `src/app.js` | Stop rendering, progress, budget and map controls |
+| `src/weather.js` | Forecast requests, date selection and cached weather |
+| `sw.js` | Offline caching for the site and selected photographs |
+| [route.md](route.md) | Full itinerary and supporting sources |
+| [IMAGE_CREDITS.md](IMAGE_CREDITS.md) | Photograph attribution and reuse licences |
 
-Las fichas se mantienen en `src/tour-data.js`. No se fijan fecha de viaje ni distancias exactas. Horarios y tarifas son referencias revisadas, no un calendario operativo en tiempo real; cada espacio enlaza información oficial. Las fotografías y sus atribuciones se mantienen en `src/photos.js`. Se cargan desde Wikimedia; el service worker guarda sólo las imágenes elegidas con respuesta válida. Las ilustraciones SVG anteriores permanecen como archivos de trabajo y ya no se muestran.
+Practical information was reviewed on 7 October 2026. Keep the route document and the displayed stop data consistent when updating the itinerary.
 
-## Publicación y verificación
+Weather comes from [Open-Meteo](https://open-meteo.com/en/docs), without an API key or device location access. Forecasts are reused for 30 minutes. If an update fails, a stored forecast remains available for up to 48 hours, provided it still covers today, and is labelled as saved data. Without usable data, the widget offers a retry and a link to AEMET. Review Open-Meteo's [terms](https://open-meteo.com/en/terms) before using its free service commercially.
 
-`dist/` contiene únicamente la web. Usa rutas relativas y admite GitHub Pages bajo `/valencia-walking-tour/`. El workflow `.github/workflows/pages.yml` verifica, prueba y prepara el artefacto. Para publicar hay que disponer de un repositorio y habilitar Pages con GitHub Actions; no se ha publicado desde esta sesión.
+Photographs are served from Wikimedia Commons. Their individual licences and original source pages are linked beside each image and in the credits. The service worker caches successful image responses from the selected URLs; missing photographs show an availability message while the guide remains readable.
 
-Al cambiar archivos publicados hay que incrementar el sufijo de versión de `CACHE` en `sw.js` (actualmente `v3`). Su caché está limitada al proyecto y sólo elimina versiones anteriores de Valencia. Navegación externa, enlaces y consultas nuevas del clima requieren conexión.
+When changing published files, increment the `CACHE` version in `sw.js`. Cache cleanup only removes older Valencia guide caches, so other sites on the same origin retain their data. New forecasts, uncached photographs and external navigation require an internet connection.
 
-Pasaron integridad, 14 pruebas unitarias y comprobaciones de Chromium a 1440, 390 y 320 px, incluyendo navegación, persistencia y lectura sin conexión bajo subruta. La carga real de fotografías y la conexión a la API no pudieron verificarse desde la red de este entorno; éxito/error/reintento se verificaron con respuestas controladas.
+## GitHub Pages
 
-Para inicializar Git, añadir `git@github.com:mtdb/valencia-walking-tour.git`, crear el commit, subir `main` y publicar, ejecuta desde una terminal con acceso a GitHub y permisos de escritura en `.git`:
+The build creates `dist/`, containing only the files needed by the website. Relative paths support deployment at `/valencia-walking-tour/`.
+
+The workflow in `.github/workflows/pages.yml` validates, tests and builds the site. Pushes to `main` deploy through GitHub Actions; pull requests run validation without deploying. Configure the repository's Pages source as **GitHub Actions**.
+
+To add `git@github.com:mtdb/valencia-walking-tour.git`, push `main`, configure Pages and verify the deployment, run from a terminal with GitHub access:
 
 ```sh
 bash tools/publish.sh
 ```
 
-El script comprueba el proyecto y la autenticación, conserva cualquier remoto existente que sea distinto, configura Pages con GitHub Actions mediante la [API oficial de Pages](https://docs.github.com/en/rest/pages/pages), espera el despliegue y verifica la URL publicada. Si el repositorio remoto ya tiene un historial incompatible, Git rechazará el push; el script no fuerza ni sobrescribe su historial.
+The helper requires Git, GitHub CLI, Node.js and curl. It checks authentication, adds the remote if missing, commits pending project changes, pushes without forcing, enables Pages, waits for the deployment and checks the published URL. An existing remote pointing elsewhere or an incompatible remote history stops publication for review.

@@ -92,4 +92,3 @@ export const PHOTOS = {
     "height": 960
   }
 };
-export const HERO_PHOTO = PHOTOS.almoina;

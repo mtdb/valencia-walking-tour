@@ -27,7 +27,8 @@ if git remote get-url origin >/dev/null 2>&1; then
 else
   git remote add origin "$remote"
 fi
-git add -- .github .gitignore .nojekyll *.md index.html manifest.webmanifest package.json pnpm-lock.yaml src styles.css sw.js tests tools icons images
+git add -u
+git add -- .github .gitignore .nojekyll *.md index.html manifest.webmanifest package.json pnpm-lock.yaml src styles.css sw.js tests tools icons
 if ! git diff --cached --quiet; then
   git commit -m 'feat(tour): add Valencia walking guide' -m $'- Add the circular route, practical information and optional visit budget\n- Include hourly weather, photographs, navigation and offline reading\n- Add validation tools and GitHub Pages deployment'
 fi

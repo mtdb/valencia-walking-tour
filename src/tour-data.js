@@ -27,7 +27,7 @@ export const INTERIORS = [
 export const STOPS = [
   {
     id: "mercado", name: "Mercado Central", shortName: "El mercado", eyebrow: "La ciudad despierta", subtitle: "Antes de mirar arriba, mira los puestos.",
-    coordinates: ROUTE.start.coordinates, mapQuery: "Plaza del Mercado, Valencia, España", art: "market", tone: "orange", duration: "30–45 min + desayuno", cost: "Entrada gratis",
+    coordinates: ROUTE.start.coordinates, mapQuery: "Plaza del Mercado, Valencia, España", tone: "orange", duration: "30–45 min + desayuno", cost: "Entrada gratis",
     description: "Verduras de la huerta, pescado, especias y conversaciones entre puestos. El Mercado Central es un buen lugar para conocer los sabores de Valencia y empezar el paseo con un desayuno.",
     look: "Levanta después la vista hacia el hierro, el cristal y la cerámica. El edificio modernista se inauguró en 1928; la actividad de mercado del entorno es mucho más antigua.",
     curiosity: "Una tradición popular cuenta que la cotorra del mercado y el Pardal de Sant Joan conversaban desde sus veletas sobre la vida de la plaza. Busca las dos aves al salir a la plaza.",
@@ -38,7 +38,7 @@ export const STOPS = [
   },
   {
     id: "comercio", name: "Lonja y Santos Juanes", shortName: "La Lonja", eyebrow: "Un palacio para el intercambio", subtitle: "La riqueza también se lee en piedra.",
-    coordinates: { lat: 39.47441, lng: -0.37843 }, mapQuery: "Carrer de la Llotja 2, Valencia, España", art: "columns", tone: "green", duration: "20 min exterior", cost: "Exterior gratis · interiores opcionales",
+    coordinates: { lat: 39.47441, lng: -0.37843 }, mapQuery: "Carrer de la Llotja 2, Valencia, España", tone: "green", duration: "20 min exterior", cost: "Exterior gratis · interiores opcionales",
     description: "Frente al mercado, la Lonja expresa la importancia de una ciudad mercantil mediterránea. Su conjunto creció entre finales del siglo XV y la primera mitad del XVI: la seda fue una parte de una economía que intercambiaba muchos productos.",
     look: "Si entras, detente bajo las columnas helicoidales de la Sala de Contratación. Su forma recuerda a un bosque de palmeras de piedra. Desde fuera, compara la Lonja con la fachada de Santos Juanes, al otro lado de la plaza.",
     curiosity: "Santos Juanes añade otra capa: su estructura gótica fue transformada después del incendio de 1592 y durante las reformas de los siglos XVII y XVIII. Los dos edificios cuentan historias distintas desde una misma plaza.",
@@ -49,7 +49,7 @@ export const STOPS = [
   },
   {
     id: "redonda", name: "Plaza Redonda y Santa Catalina", shortName: "Plaza Redonda", eyebrow: "El pequeño comercio", subtitle: "Un rincón para bajar el ritmo.",
-    coordinates: { lat: 39.47361, lng: -0.37656 }, art: "round", tone: "rose", duration: "20–30 min + pausa", cost: "Plaza e iglesia gratis",
+    coordinates: { lat: 39.47361, lng: -0.37656 }, tone: "rose", duration: "20–30 min + pausa", cost: "Plaza e iglesia gratis",
     description: "Tras la monumentalidad de la Lonja, Plaza Redonda invita a detenerse entre pequeños comercios. Esta plaza de 37 metros de diámetro se construyó en 1840 sobre el terreno del antiguo matadero y se rehabilitó en 2012.",
     look: "Mira los accesos, los balcones y los escaparates. Después busca Santa Catalina: la iglesia de tradición gótica y su torre barroca reúnen épocas distintas en un mismo conjunto.",
     curiosity: "Santa Catalina tiene una girola: un pasillo que rodea el altar mayor. Cerca de la iglesia encontrarás también la horchatería del mismo nombre, una buena excusa para hacer una pausa.",
@@ -60,7 +60,7 @@ export const STOPS = [
   },
   {
     id: "catedral", name: "Tres puertas, una Catedral", shortName: "La Catedral", eyebrow: "Aprender a mirar", subtitle: "¿Parecen las tres puertas del mismo edificio?",
-    coordinates: { lat: 39.47534, lng: -0.37549 }, mapQuery: "Puerta de los Hierros, Catedral de Valencia, España", art: "cathedral", tone: "sand", duration: "20–30 min exterior", cost: "Portadas gratis · visita cultural 12 €",
+    coordinates: { lat: 39.47534, lng: -0.37549 }, mapQuery: "Puerta de los Hierros, Catedral de Valencia, España", tone: "sand", duration: "20–30 min exterior", cost: "Portadas gratis · visita cultural 12 €",
     description: "La Catedral comenzó a construirse en 1262 sobre la antigua mezquita mayor. Sus portadas hacen visibles siglos de ampliaciones y cambios de poder y religión. Puedes contemplar las tres puertas desde la calle.",
     look: "Empieza en Hierros: curvas barrocas desde Plaza de la Reina. Continúa por Barchilla hacia el Palau: arcos románicos junto a la Almoina. Tras esa parada, llegarás a Apóstoles y su lenguaje gótico en Plaza de la Virgen.",
     curiosity: "Románico, gótico y barroco conviven en un solo edificio. Al comparar las puertas, fíjate en los arcos, las esculturas y la forma de las fachadas: cada una pertenece a un momento distinto de la Catedral.",
@@ -71,7 +71,7 @@ export const STOPS = [
   },
   {
     id: "almoina", name: "Almoina y Plaza de la Virgen", shortName: "El agua y la memoria", eyebrow: "Lo que hay bajo los pies", subtitle: "Varias ciudades. Un mismo suelo.",
-    coordinates: { lat: 39.47577, lng: -0.37453 }, mapQuery: "Plaza de la Almoina, Valencia, España", art: "water", tone: "water", duration: "25–35 min exterior", cost: "Plazas gratis · museo 2 €",
+    coordinates: { lat: 39.47577, lng: -0.37453 }, mapQuery: "Plaza de la Almoina, Valencia, España", tone: "water", duration: "25–35 min exterior", cost: "Plazas gratis · museo 2 €",
     description: "Valentia fue fundada en 138 a. C. La Almoina conserva testimonios romanos, visigodos e islámicos: cada época reutilizó y transformó la anterior. Si quieres ver los restos de cerca y conocer su historia, entra en el museo arqueológico.",
     look: "Pasa entre la Catedral y la Basílica hasta la puerta de los Apóstoles, en Plaza de la Virgen. Aquí se reúne el Tribunal de las Aguas, una institución vinculada al riego de la huerta.",
     curiosity: "El Tribunal de las Aguas reúne a representantes de las comunidades de regantes para resolver conflictos sobre el riego. Sus sesiones públicas siguen formando parte de la vida de la huerta.",
@@ -82,7 +82,7 @@ export const STOPS = [
   },
   {
     id: "serranos", name: "Torres de Serranos", shortName: "Serranos", eyebrow: "El umbral de la ciudad", subtitle: "Imagina la muralla continuando a ambos lados.",
-    coordinates: { lat: 39.47927, lng: -0.37600 }, mapQuery: "Torres de Serranos, Plaza dels Furs, Valencia, España", art: "towers", tone: "orange", duration: "15–20 min exterior", cost: "Exterior gratis · subida 2 €",
+    coordinates: { lat: 39.47927, lng: -0.37600 }, mapQuery: "Torres de Serranos, Plaza dels Furs, Valencia, España", tone: "orange", duration: "15–20 min exterior", cost: "Exterior gratis · subida 2 €",
     description: "Hoy las torres parecen aisladas. Fueron una de las puertas de la muralla medieval cristiana, cuya demolición comenzó en 1865. Serranos sobrevivió y todavía permite imaginar cómo se entraba en la ciudad amurallada.",
     look: "Observa sus dos fachadas y mira atrás hacia la ciudad que acabas de recorrer. No hace falta subir para comprender su papel como puerta monumental.",
     curiosity: "Durante la Guerra Civil, la Junta del Tesoro Artístico acondicionó las torres para proteger obras evacuadas del Museo del Prado. Las torres se convirtieron así en refugio para parte de la colección del Prado.",
@@ -93,7 +93,7 @@ export const STOPS = [
   },
   {
     id: "carmen", name: "El Carmen, sin prisa", shortName: "El Carmen", eyebrow: "Volver con otra mirada", subtitle: "Un último paseo entre calles y plazas.",
-    coordinates: { lat: 39.47904, lng: -0.37857 }, mapQuery: "Plaza del Carmen, Ciutat Vella, Valencia, España", art: "street", tone: "green", duration: "30–45 min + pausa", cost: "Barrio y CCCC gratis",
+    coordinates: { lat: 39.47904, lng: -0.37857 }, mapQuery: "Plaza del Carmen, Ciutat Vella, Valencia, España", tone: "green", duration: "30–45 min + pausa", cost: "Barrio y CCCC gratis",
     description: "Balcones, puertas abiertas y conversaciones en las terrazas. En el Carmen, los monumentos conviven con la vida del barrio. Antes de volver al Mercado, aprovecha para comer, sentarte en una plaza o recorrer sus calles con calma.",
     look: "Desde plaza del Carmen, acércate al Centre del Carme Cultura Contemporània (CCCC), en la calle del Museo, 2. Sus exposiciones son gratuitas y abre habitualmente de martes a domingo de 11:00 a 21:00.",
     curiosity: "Además de los grandes edificios, Valencia se reconoce en los oficios que la sostienen: cultivar la huerta, repartir el agua, vender en el mercado. Al regresar, volverás a encontrar esas historias en la plaza donde empezó el paseo.",

@@ -1,6 +1,6 @@
 # Valencia: del agua a la mesa, de la mesa a la plaza
 
-Revisión documental, cartográfica, de accesos y tarifas: 7 de octubre de 2026. [Crítica de los dos agentes y decisiones](route-review.md). Precios por persona salvo que se indique lo contrario; consultar excepciones del día elegido.
+Revisión documental, cartográfica, de accesos y tarifas: 7 de octubre de 2026. Precios por persona salvo que se indique lo contrario; consultar excepciones del día elegido.
 
 **Decisión para el sitio:** el recorrido se ofrece cualquier día, sin una fecha de viaje preconfigurada ni exigencia de distancias exactas. Los ejemplos horarios de este documento son orientativos. El visitante elige interiores y consulta la previsión por horas de hoy o de los seis días siguientes; las condiciones de apertura y gratuidad se muestran sin asumir viernes o sábado. El GPX de la web contiene referencias, no un track medido.
 
