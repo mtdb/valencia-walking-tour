@@ -4,6 +4,16 @@ Revisión documental, cartográfica, de accesos y tarifas: 7 de octubre de 2026.
 
 **Decisión para el sitio:** el recorrido se ofrece cualquier día, sin una fecha de viaje preconfigurada ni exigencia de distancias exactas. Los ejemplos horarios de este documento son orientativos. El visitante elige interiores y consulta la previsión por horas de hoy o de los seis días siguientes; las condiciones de apertura y gratuidad se muestran sin asumir viernes o sábado. El GPX de la web contiene referencias, no un track medido.
 
+## Tres ciudades bajo tus pies
+
+Valencia no se construyó de una sola vez. El paseo conecta tres hilos históricos sin cambiar las siete paradas ni su orden:
+
+- **Valentia romana · 138 a. C.** La fundación junto al Turia y los restos de calles, termas y edificios públicos se descubren en la Almoina. El museo también conserva testimonios de épocas posteriores. [Centro arqueológico municipal](https://cultural.valencia.es/es/museu/la-almoina-centro-arqueologico/).
+- **Balansiya musulmana · siglos VIII–XIII.** El agua, la huerta y las murallas ayudan a imaginar la ciudad bajo dominio islámico. En la Almoina quedan elementos del alcázar relacionados con el agua; el pasado del Carmen continúa ese hilo en el regreso. [Almoina: período islámico](https://www.valencia.es/cas/almoina/periodo-islamico).
+- **Desde la conquista de Jaime I · 1238.** Comienza una nueva etapa de dominio cristiano. La Catedral, la puerta de Serranos y el esplendor comercial de la Lonja muestran transformaciones de los siglos siguientes. [Catedral](https://cultural.valencia.es/es/monument/catedral-de-valencia-iglesia-metropolitana/), [Serranos y la muralla](https://www.valencia.es/es/-/valencia-memoria.-torres-serrans), [Lonja: UNESCO](https://whc.unesco.org/en/list/782/).
+
+Estas etapas no resumen toda la historia de Valencia: ya había comunidades cristianas antes de 1238, en la Antigüedad tardía y la época visigoda. La muralla islámica y la medieval cristiana son recintos distintos. El Tribunal de las Aguas se presenta como una institución viva de las comunidades de regantes, sin atribuirle aquí un origen preciso.
+
 ## ¿Es una ruta circular?
 
 **Sí: la propuesta puede formar un circuito cerrado compacto por Ciutat Vella.** El texto original ya regresaba al Mercado Central, pero dejaba abierto el camino por el Carmen y repetía el entorno de Catedral–Virgen–Almoina. Esta revisión fija el inicio y el final en la **plaza del Mercado, delante del conjunto Mercado–Lonja**, y recorre el sector oriental hacia Serranos para volver por el Carmen y Bolsería.
@@ -162,7 +172,7 @@ El itinerario visita tres lados de la Catedral sin necesitar una vuelta completa
 
 Las tres portadas hacen visible cómo el edificio fue creciendo y cambiando. La Catedral comenzó a construirse en 1262 sobre la antigua mezquita mayor, tras la conquista cristiana de la ciudad. Esa sucesión habla también de cambios de poder y religión. [Cultural València](https://cultural.valencia.es/es/monument/catedral-de-valencia-iglesia-metropolitana/?utm_source=chatgpt.com)
 
-Podéis convertirlo en un pequeño juego: *¿parecen las tres puertas del mismo edificio?* Aquí se aprende a mirar Valencia por capas.
+La conquista de Jaime I en 1238 marca una nueva etapa de dominio cristiano, no la primera presencia cristiana en Valencia. Podéis convertirlo en un pequeño juego: *¿parecen las tres puertas del mismo edificio?* Aquí se aprende a mirar Valencia por capas.
 
 **5. Almoina y Plaza de la Virgen: descubrir las capas de la ciudad y el agua**
 
@@ -184,7 +194,7 @@ Yo haría aquí una pausa para mirar atrás: habéis pasado de los puestos del m
 
 Desde Serranos, el tramo por Roteros hasta la plaza del Carmen permite aflojar la atención a los monumentos y mirar los detalles: balcones, puertas, calles estrechas y personas usando el barrio. La comida aquí puede ser parte de la experiencia, sin necesidad de añadir otra visita; si os entretenéis, el mercado puede estar cerrado al regreso.
 
-Es el tramo para recordar que el centro histórico también es un lugar donde se vive. Dejad un rato sin objetivos; a veces una conversación o una calle que os llama la atención se recuerda más que una fecha.
+El pasado islámico del Carmen y sus transformaciones posteriores completan el hilo de las sucesivas ciudades. Durante el regreso por Museo y Alta, preguntaos qué huellas dejan las distintas épocas en sus calles y edificios; no hace falta añadir un desvío para situar esa memoria. Es el tramo para recordar que el centro histórico también es un lugar donde se vive. Dejad un rato sin objetivos; a veces una conversación o una calle que os llama la atención se recuerda más que una fecha.
 
 El corredor de regreso propuesto continúa por Museo / Alta, Tossal y Bolsería hasta la misma plaza del Mercado donde empezó el paseo. Al volver, mirad otra vez el conjunto, aunque el mercado ya esté cerrado. Ya podéis relacionar **los alimentos, el comercio, el agua, las sucesivas ciudades y sus antiguas murallas**.
 

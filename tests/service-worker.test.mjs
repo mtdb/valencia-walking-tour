@@ -9,11 +9,11 @@ test("activation deletes old Valencia shells while retaining another guide's cac
   let activation;
   runInNewContext(await readFile(new URL("../sw.js", import.meta.url), "utf8"), {
     self: { addEventListener: (event, callback) => { handlers[event] = callback; }, clients: { claim: async () => {} } },
-    caches: { keys: async () => ["valencia-tour-shell-v5", "valencia-tour-shell-v4", "valencia-tour-shell-v3", "valencia-tour-shell-v2", "valencia-tour-shell-v1", "valencia-tour-shell-v0", "avignon-tour-v2", "other-app-cache"], delete: async (key) => { deleted.push(key); return true; } },
+    caches: { keys: async () => ["valencia-tour-shell-v6", "valencia-tour-shell-v5", "valencia-tour-shell-v4", "valencia-tour-shell-v3", "valencia-tour-shell-v2", "valencia-tour-shell-v1", "valencia-tour-shell-v0", "avignon-tour-v2", "other-app-cache"], delete: async (key) => { deleted.push(key); return true; } },
   });
   handlers.activate({ waitUntil: (promise) => { activation = promise; } });
   await activation;
-  assert.deepEqual(deleted, ["valencia-tour-shell-v4", "valencia-tour-shell-v3", "valencia-tour-shell-v2", "valencia-tour-shell-v1", "valencia-tour-shell-v0"]);
+  assert.deepEqual(deleted, ["valencia-tour-shell-v5", "valencia-tour-shell-v4", "valencia-tour-shell-v3", "valencia-tour-shell-v2", "valencia-tour-shell-v1", "valencia-tour-shell-v0"]);
 });
 
 test("only successful selected photos are cached and remain readable offline", async () => {

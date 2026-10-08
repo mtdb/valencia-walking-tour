@@ -70,6 +70,9 @@ try {
   await send("Emulation.setDeviceMetricsOverride", { width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false });
   await send("Page.navigate", { url: base });
   await until(() => evaluate("document.querySelectorAll('.weather-day').length === 7 && document.querySelectorAll('[data-stop-id]').length === 7"), "Page did not render");
+  assert.equal(await evaluate("document.querySelectorAll('#historia .history-grid > li').length"), 3);
+  assert.equal(await evaluate("document.querySelectorAll('[data-stop-id] .history-tags').length"), 5);
+  assert.equal(await evaluate("Array.from(document.querySelectorAll('#historia a[href^=\"#\"]')).every(link => document.querySelector(link.getAttribute('href')) !== null)"), true);
   assert.equal(await evaluate("document.querySelectorAll('.weather-hour').length"), 24);
   assert.equal(await evaluate("document.querySelector('.weather-day').textContent.includes('Hoy')"), true);
   await evaluate("document.querySelectorAll('[data-weather-day]')[1].click()");
@@ -122,9 +125,12 @@ try {
   assert.equal(await evaluate("document.querySelectorAll('.stop-art figcaption small a').length"), 14);
   await screenshot("desktop", 1440);
   await screenshot("desktop-weather", 1440, "#tiempo");
+  await screenshot("desktop-history", 1440, "#historia");
   await screenshot("mobile", 390);
   await screenshot("mobile-weather", 390, "#tiempo");
   await screenshot("small-mobile-weather", 320, "#tiempo");
+  await screenshot("small-mobile-history", 320, "#historia");
+  await screenshot("mobile-history-stop", 390, "#parada-almoina");
 
   await until(() => evaluate("navigator.serviceWorker.controller !== null"), "Service worker did not take control");
   await evaluate("caches.open('madrid-test-sentinel')");
@@ -134,6 +140,8 @@ try {
   await until(() => evaluate("document.querySelectorAll('[data-stop-id]').length === 7 && document.querySelectorAll('.weather-day').length === 7"), "Offline guide failed");
   assert.equal(await evaluate("document.querySelector('[data-weather]').classList.contains('is-stale')"), true);
   assert.equal(await evaluate("(async()=> (await caches.keys()).includes('madrid-test-sentinel'))()"), true);
+  assert.equal(await evaluate("document.querySelectorAll('#historia .history-grid > li').length"), 3);
+  assert.equal(await evaluate("document.querySelectorAll('[data-stop-id] .history-tags').length"), 5);
   await evaluate("document.querySelectorAll('img').forEach(img=>img.loading='eager')");
   await until(() => evaluate("Array.from(document.images).every(img=>img.complete&&(img.naturalWidth>0||(img.hidden&&img.parentElement.querySelector('.photo-unavailable'))))"), "Offline photos or unavailable state did not render");
   await send("Page.removeScriptToEvaluateOnNewDocument", { identifier: offlineScript.identifier });
@@ -151,7 +159,7 @@ try {
   assert.deepEqual(errors, [], "Browser exceptions");
   assert.deepEqual(badResponses, [], "HTTP errors");
   ws.close();
-  await writeFile(new URL("../captures/browser-report.json", import.meta.url), JSON.stringify({ passed: true, source: "Synthetic weather fixtures; real photo loading or error states depending on network availability", checks: ["1440/390/320 responsive widths", "7 forecast days and hourly changes", "visited focus and persistence", "budget persistence", "glossary focus", "copy next/return destination", "GPX XML", "stale/error/retry weather", "offline subpath shell and photo fallback", "unrelated cache retained"], errors, badResponses }, null, 2));
+  await writeFile(new URL("../captures/browser-report.json", import.meta.url), JSON.stringify({ passed: true, source: "Synthetic weather fixtures; real photo loading or error states depending on network availability", checks: ["1440/390/320 responsive widths", "historical overview, stop labels and links, including offline", "7 forecast days and hourly changes", "visited focus and persistence", "budget persistence", "glossary focus", "copy next/return destination", "GPX XML", "stale/error/retry weather", "offline subpath shell and photo fallback", "unrelated cache retained"], errors, badResponses }, null, 2));
   console.log("Browser smoke passed: responsive layout, weather days/cache/error/retry, route persistence/navigation, GPX and offline subpath guide. Screenshots in captures/.");
 } catch (error) {
   console.error(error); if (stderr && !stderr.includes("DevTools listening")) console.error(stderr.slice(-2000)); process.exitCode = 1;
