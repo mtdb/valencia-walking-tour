@@ -10,6 +10,10 @@ Revisión documental, cartográfica, de accesos y tarifas: 7 de octubre de 2026.
 
 La circularidad aquí significa volver al mismo punto mediante un itinerario distinto al de ida; no significa dibujar un círculo perfecto ni evitar todo pequeño acceso de ida y vuelta. Se ha contrastado la disposición de los lugares y el corredor con el [plano turístico de la Generalitat](https://multimedia.comunitatvalenciana.com/45D3B1C978FD4EF5ACE0186B77B2B72C/doc/F2E9CE8CB4944C7D937963E8CE732115/PLANO_VALENCIA_ESP-ING_2023.pdf) y las direcciones oficiales de los monumentos. La medición exacta por la red peatonal sigue pendiente: el servicio de cálculo consultado no fue accesible. **Las referencias y conexiones documentadas no equivalen a una inspección presencial ni certifican accesibilidad universal o ausencia de obras.**
 
+### Llegar en coche
+
+Este paseo está pensado para llegar en coche al centro y dejarlo en el [Parking Centro Histórico–Mercado Central](https://www.google.com/maps/search/?api=1&query=Parking+Centro+Hist%C3%B3rico+Mercado+Central+Plaza+de+la+Ciudad+de+Brujas+Valencia), en la plaza de la Ciudad de Brujas. Desde allí, acércate a pie a la plaza del Mercado para empezar. La ruta es circular: al terminar, volverás al punto de partida, cerca del aparcamiento.
+
 ### Orden recomendado
 
 **Plaza del Mercado → Mercado Central → Santos Juanes → Lonja → Plaza Redonda → Santa Catalina → Plaza de la Reina / Hierros → Palau / Almoina → Plaza de la Virgen / Apóstoles → Serranos → plaza del Carmen → Tossal → Bolsería → misma plaza del Mercado.**
